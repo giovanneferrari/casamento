@@ -1,0 +1,38 @@
+body {
+  background-color: #f7f9fa;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.logo {
+  font-family: "Montaga", serif;
+  font-size: 30px;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 15px;
+  flex: 1;
+}
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+  margin: 100px;
+  flex-wrap: wrap; /* Faz os botões se adaptarem em telas menores */
+  justify-content: right; /* Centraliza os botões */
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Empilha logo e botões */
+    align-items: center; /* Centraliza logo e botões */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Adiciona espaço entre o logo e os botões */
+  }
+
+  .nav-links {
+    justify-content: center; /* Centraliza os botões */
+  }
+}
