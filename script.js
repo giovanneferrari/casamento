@@ -61,7 +61,7 @@ let currentTrackIndex = 0;
 const playlist = [
   { id: "aUKbzNt0viA" },
   { id: "cNGjD0VG4R8" },
-  { id: "YET_ANOTHER_VIDEO_ID" },
+  { id: "GiXHRwNTu_I" },
 ];
 
 function loadTrack(index) {
