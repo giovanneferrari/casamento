@@ -1,0 +1,235 @@
+body {
+  background-color: #f7f9fa;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.header-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centralizar informações */
+  padding: 30px; /* Distância do topo */
+}
+
+.imagem-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.imagem-principal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-size: 70px;
+  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
+  z-index: 2; /* Garante que o texto fique sobre a imagem */
+  text-align: center; /* Centraliza o texto */
+  color: #00353e; /* Define a cor do texto como branca */
+  margin: 20px;
+  margin-bottom: 5px;
+}
+
+p {
+  margin: 10px;
+  font-family: "Montaga", serif;
+}
+
+#datarodape {
+  font-family: "Montaga", serif;
+  font-size: 20px;
+  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
+  z-index: 2; /* Garante que o texto fique sobre a imagem */
+  text-align: center; /* Centraliza o texto */
+  color: #00353e; /* Define a cor do texto como branca */
+  margin: 10px;
+}
+
+.shape {
+  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
+  z-index: 0; /* Garante que o texto fique sobre a imagem */
+  height: 150vh;
+  width: 250vh;
+  background-color: white;
+  margin: 40px auto;
+}
+
+.countdown-container {
+  position: absolute; /* Posiciona o container do countdown absolutamente */
+  top: 50%; /* Posiciona o container do countdown no meio da página */
+  left: 50%; /* Posiciona o container do countdown no meio da página */
+  transform: translate(-50%, -50%); /* Centraliza o container do countdown */
+  z-index: 3; /* Define o z-index do container do countdown como 3 */
+  display: flex;
+  justify-content: center;
+  margin-top: -60px;
+}
+
+#countdown {
+  z-index: 3; /* Define o z-index do elemento #countdown como 3 */
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.countdown-item-dia,
+.countdown-item-hora,
+.countdown-item-minutos,
+.countdown-item-segundos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#countdown-dias {
+  font-size: 50px;
+  font-weight: normal;
+  color: #00353e;
+  font-family: "Montaga", serif;
+  position: relative;
+}
+
+#countdown-dias-texto {
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 900;
+  color: #00353e;
+  font-family: "Montaga", serif;
+  position: relative;
+}
+
+#countdown-horas {
+  font-size: 50px;
+  font-weight: normal;
+  color: #00353e;
+  font-family: "Montaga", serif;
+  position: relative;
+}
+
+#countdown-horas-texto {
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 900;
+  color: #00353e;
+  font-family: "Montaga", serif;
+  position: relative;
+}
+
+#countdown-minutos {
+  font-size: 50px;
+  font-weight: lighter;
+  color: #00353e;
+  font-family: "Montaga", serif;
+  position: relative;
+}
+
+#countdown-minutos-texto {
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 900;
+  color: #00353e;
+  font-family: "Montaga", serif;
+  position: relative;
+}
+
+#countdown-segundos {
+  font-size: 50px;
+  font-weight: lighter;
+  color: #00353e;
+  font-family: "Montaga", serif;
+  position: relative;
+}
+
+#countdown-segundos-texto {
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 900;
+  color: #00353e;
+  font-family: "Montaga", serif;
+  position: relative;
+}
+
+/* Shape de fundo */
+#countdown::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -5%;
+  width: 110%;
+  height: 170%;
+  border: 4px solid #7e7e7e;
+  border-radius: 15% 5% / 5% 15%; /* Torna o fundo arredondado */
+  z-index: -1; /* Posiciona o fundo atrás do texto */
+}
+
+.titulo-sobreposto2 {
+  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
+  font-family: "Montaga", serif;
+  z-index: 2; /* Garante que o texto fique sobre a imagem */
+  text-align: center; /* Centraliza o texto */
+  color: #00353e; /* Define a cor do texto como branca */
+  padding: 80px 40px 0 40px; /* Adiciona espaçamento ao redor do texto */
+  margin-top: 70px; /* Adiciona titulo-nome espaço abaixo da barra de navegação */
+  font-size: 25px;
+  max-width: 80%; /* Limita a largura do texto */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.demais-infos {
+  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
+  z-index: 2; /* Garante que o texto fique sobre a imagem */
+  text-align: center; /* Centraliza o texto */
+  color: #00353e; /* Define a cor do texto como branca */
+  padding: 80px 40px 0 40px; /* Adiciona espaçamento ao redor do texto */
+  margin-top: 120px; /* Adiciona um espaço abaixo da barra de navegação */
+  font-size: 25px;
+  max-width: 80%; /* Limita a largura do texto */
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Montaga", serif;
+  font-weight: 900;
+}
+
+#local {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Empilha logo e botões */
+    align-items: center; /* Centraliza logo e botões */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Adiciona espaço entre o logo e os botões */
+  }
+
+  .nav-left,
+  .nav-right {
+    flex-direction: column; /* Alinha os botões verticalmente */
+    justify-content: center; /* Centraliza os botões */
+    align-items: center; /* Centraliza os botões */
+  }
+
+  .nav-left li,
+  .nav-right li {
+    margin: 5px 0; /* Adiciona margem entre os itens verticalmente */
+  }
+}
