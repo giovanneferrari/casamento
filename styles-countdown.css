@@ -45,8 +45,16 @@ h1 {
 }
 
 p {
-  margin: 10px;
+  margin: 20px;
   font-family: "Montaga", serif;
+}
+
+#nomes-destaque {
+  font-family: "Xanh Mono", monospace;
+  font-weight: 200;
+  font-style: normal;
+  color: #00353e;
+  font-size: 40px;
 }
 
 #datarodape {
@@ -177,17 +185,35 @@ p {
 }
 
 .titulo-sobreposto2 {
+  justify-content: center;
+  display: flex;
   position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
   font-family: "Montaga", serif;
   z-index: 2; /* Garante que o texto fique sobre a imagem */
   text-align: center; /* Centraliza o texto */
   color: #00353e; /* Define a cor do texto como branca */
   padding: 80px 40px 0 40px; /* Adiciona espaçamento ao redor do texto */
-  margin-top: 70px; /* Adiciona titulo-nome espaço abaixo da barra de navegação */
+  margin-top: 10px; /* Adiciona titulo-nome espaço abaixo da barra de navegação */
   font-size: 25px;
   max-width: 80%; /* Limita a largura do texto */
   margin-left: auto;
   margin-right: auto;
+}
+
+#titulo-nome {
+  font-family: "Xanh Mono", monospace;
+  font-weight: 200;
+  font-style: normal;
+  color: #00353e;
+  font-size: 60px;
+}
+
+#titulo-nome-the {
+  font-family: "Great Vibes", cursive;
+  font-weight: 500;
+  font-style: normal;
+  color: #00353e;
+  font-size: 60px;
 }
 
 .demais-infos {
@@ -196,7 +222,7 @@ p {
   text-align: center; /* Centraliza o texto */
   color: #00353e; /* Define a cor do texto como branca */
   padding: 80px 40px 0 40px; /* Adiciona espaçamento ao redor do texto */
-  margin-top: 120px; /* Adiciona um espaço abaixo da barra de navegação */
+  margin-top: 150px; /* Adiciona um espaço abaixo da barra de navegação */
   font-size: 25px;
   max-width: 80%; /* Limita a largura do texto */
   margin-left: auto;
