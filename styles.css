@@ -3,22 +3,127 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  height: 100%;
 }
+
 .logo {
-  font-family: "Montaga", serif;
-  font-size: 30px;
-  font-weight: normal;
-  text-align: center;
-  margin-top: 15px;
-  flex: 1;
+  margin: 0 80px;
+  zoom: 20%; /* AJUSTAR LOGO DEPOIS */
 }
-.nav-links {
-  list-style-type: none;
+
+.header-container {
+  position: relative;
+  z-index: 2;
   display: flex;
-  gap: 15px;
-  margin: 100px;
-  flex-wrap: wrap; /* Faz os botões se adaptarem em telas menores */
-  justify-content: right; /* Centraliza os botões */
+  align-items: center;
+  justify-content: center; /* Centralizar informações */
+  padding: 30px; /* Distância do topo */
+}
+
+.nav-left {
+  display: flex;
+  list-style: none;
+  font-size: 18px;
+  margin: 0;
+  font-weight: lighter;
+  font-family: "Montaga", serif;
+  padding: 0 0 0 20px;
+}
+
+.nav-right {
+  display: flex;
+  list-style: none;
+  font-size: 18px;
+  margin: 0;
+  font-weight: lighter;
+  font-family: "Montaga", serif;
+  padding: 0 20px 0 0;
+}
+
+.nav-left li,
+.nav-right li {
+  margin: 0 30px;
+}
+
+.nav-left a,
+.nav-right a {
+  text-decoration: none;
+  color: #444444;
+  cursor: pointer;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+  color: #0c6d7e;
+  text-decoration: #0c6d7e wavy underline;
+  font-weight: bold;
+  font-family: "Montaga", serif;
+}
+
+.imagem-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.imagem-principal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.titulo-sobreposto {
+  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
+  z-index: 2; /* Garante que o texto fique sobre a imagem */
+  text-align: center; /* Centraliza o texto */
+  color: #00353e; /* Define a cor do texto como branca */
+  padding: 10px; /* Adiciona espaçamento ao redor do texto */
+  margin-top: 15px; /* Adiciona um espaço abaixo da barra de navegação */
+  font-size: 25px;
+  max-width: 80%; /* Limita a largura do texto */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-size: 120px;
+  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
+  z-index: 2; /* Garante que o texto fique sobre a imagem */
+  text-align: center; /* Centraliza o texto */
+  color: #00353e; /* Define a cor do texto como branca */
+  margin: 20px;
+  margin-bottom: 5px;
+}
+
+p {
+  margin: 10px;
+  font-family: "Montaga", serif;
+}
+
+#datarodape {
+  font-family: "Montaga", serif;
+  font-size: 20px;
+  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
+  z-index: 2; /* Garante que o texto fique sobre a imagem */
+  text-align: center; /* Centraliza o texto */
+  color: #00353e; /* Define a cor do texto como branca */
+  margin: 10px;
+}
+
+.shape {
+  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
+  z-index: 0; /* Garante que o texto fique sobre a imagem */
+  height: 150vh;
+  width: 250vh;
+  background-color: white;
+  margin: 40px auto;
 }
 
 /* Media query para telas menores */
@@ -32,7 +137,15 @@ body {
     margin-bottom: 10px; /* Adiciona espaço entre o logo e os botões */
   }
 
-  .nav-links {
+  .nav-left,
+  .nav-right {
+    flex-direction: column; /* Alinha os botões verticalmente */
     justify-content: center; /* Centraliza os botões */
+    align-items: center; /* Centraliza os botões */
+  }
+
+  .nav-left li,
+  .nav-right li {
+    margin: 5px 0; /* Adiciona margem entre os itens verticalmente */
   }
 }
