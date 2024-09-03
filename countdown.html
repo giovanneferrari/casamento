@@ -15,6 +15,10 @@
       rel="stylesheet"
     />
     <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
   </head>
   <body>
     <div class="imagem-container">
@@ -25,8 +29,9 @@
       <p id="titulo-nome-the">the</p>
       <p id="titulo-nome">DATE</p>
     </div>
+    <p class="texto-com-traco"></p>
     <div class="titulo-sobreposto3"></div>
-      <h1 id="nomes-destaque">AMANDA & GIOVANNE</h1>
+      <h1 id="nomes-destaque">Amanda & Giovanne</h1>
     </div>
     <div class="countdown-container">
       <div id="countdown">
@@ -49,9 +54,23 @@
       </div>
     </div>
     <div class="demais-infos">
-      <span id="data">10 de Novembro de 2025</span> </br>
+      <span id="data">10 de novembro de 2025</span> </br>
       <span id="local">Itapecerica da Serra, São Paulo</span>
     </div>
+    <div class="audio-only-container">
+      <div id="audio-placeholder"></div>
+    </div>
+
+    <div class="audio-controller">
+      <button id="previous-btn"><i class="fas fa-backward"></i></button>
+      <button id="play-pause-btn">
+        <i id="play-pause-icon" class="fas fa-pause"></i>
+      </button>
+      <button id="next-btn"><i class="fas fa-forward"></i></button>
+      <button id="volume-up-btn"><i class="fas fa-volume-up"></i></button>
+      <button id="volume-down-btn"><i class="fas fa-volume-down"></i></button>
+    </div>
     <script src="script.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
   </body>
 </html>

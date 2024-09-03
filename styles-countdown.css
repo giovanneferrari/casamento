@@ -49,12 +49,31 @@ p {
   font-family: "Montaga", serif;
 }
 
+.texto-com-traco {
+  display: flex; /* Usa flexbox para alinhar itens */
+  align-items: center; /* Alinha o traço verticalmente no centro com o texto */
+  justify-content: center;
+}
+
+.texto-com-traco::before {
+  justify-content: center;
+  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
+  content: "";
+  display: inline-block;
+  margin-top: -80px;
+  width: 350px; /* Largura do traço */
+  height: 1px; /* Altura do traço */
+  background-color: #000; /* Cor do traço */
+  vertical-align: middle; /* Alinha o traço com o texto */
+  z-index: 2; /* Garante que o texto fique sobre a imagem */
+}
+
 #nomes-destaque {
-  font-family: "Xanh Mono", monospace;
+  font-family: "Great Vibes", cursive;
   font-weight: 200;
   font-style: normal;
   color: #00353e;
-  font-size: 40px;
+  font-size: 100px;
 }
 
 #datarodape {
@@ -101,6 +120,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 #countdown-dias {
@@ -179,9 +199,23 @@ p {
   left: -5%;
   width: 110%;
   height: 170%;
-  border: 4px solid #7e7e7e;
+  border: 4px solid #888888;
   border-radius: 15% 5% / 5% 15%; /* Torna o fundo arredondado */
   z-index: -1; /* Posiciona o fundo atrás do texto */
+}
+
+.countdown-item-dia::after,
+.countdown-item-hora::after,
+.countdown-item-minutos::after {
+  content: "";
+  position: absolute;
+  right: -20px; /* Ajusta a posição horizontal do traço, entre os elementos */
+  top: 50%;
+  transform: translateY(-50%); /* Centraliza o traço verticalmente */
+  width: 1px; /* Define a largura do traço vertical */
+  height: 70px; /* Define a altura do traço vertical */
+  background-color: #888888; /* Cor do traço */
+  z-index: 1; /* Coloca o traço atrás do texto */
 }
 
 .titulo-sobreposto2 {
@@ -222,7 +256,7 @@ p {
   text-align: center; /* Centraliza o texto */
   color: #00353e; /* Define a cor do texto como branca */
   padding: 80px 40px 0 40px; /* Adiciona espaçamento ao redor do texto */
-  margin-top: 150px; /* Adiciona um espaço abaixo da barra de navegação */
+  margin-top: 110px; /* Adiciona um espaço abaixo da barra de navegação */
   font-size: 25px;
   max-width: 80%; /* Limita a largura do texto */
   margin-left: auto;
@@ -234,6 +268,70 @@ p {
 #local {
   font-size: 20px;
   font-weight: 300;
+}
+
+.audio-only-container iframe {
+  width: 300px; /* Define a largura do iframe */
+  height: 45px; /* Altura suficiente para mostrar os controles */
+  border: 0;
+}
+
+.audio-only-container iframe::-webkit-media-controls-panel {
+  background-color: #000; /* Cor de fundo dos controles */
+}
+
+.audio-only-container iframe::before {
+  content: ""; /* Adiciona um overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 2;
+}
+
+.audio-only-container iframe {
+  width: 1px;
+  height: 1px;
+  border: 0;
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.audio-controller {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  gap: 10px;
+  z-index: 3; /* Aumenta o z-index para garantir que o player fique no topo */
+}
+
+.audio-controller button {
+  background: #fff;
+  color: #333;
+  border: none;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.audio-controller button:hover {
+  background: #ddd;
+}
+
+.audio-description {
+  text-align: center; /* Centraliza o texto */
+  font-family: Arial, sans-serif; /* Define a fonte */
+  font-size: 18px; /* Tamanho da fonte */
+  color: #333; /* Cor do texto */
+  margin-bottom: 10px; /* Espaço abaixo do descritivo */
 }
 
 /* Media query para telas menores */
