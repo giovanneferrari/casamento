@@ -6,6 +6,7 @@ body {
   box-sizing: border-box;
   height: 100vh;
   overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 
@@ -280,8 +281,8 @@ p {
 /* Media query para telas menores */
 @media (max-width: 768px) {
   #nomes-destaque {
-    font-size: 50px;
-    margin: 10px 0;
+    font-size: 80px;
+    margin-top: -50px;
   }
 
   .imagem-container {
@@ -290,27 +291,58 @@ p {
   .titulo-sobreposto2 {
     padding: 20px;
     font-size: 40px;
+    margin-top: -50px;
   }
 
   #titulo-nome,
   #titulo-nome-the {
-    font-size: 40px;
+    font-size: 50px;
+    margin: 10px;
+  }
+
+  .texto-com-traco {
+    top: 12%;
+    display: flex; /* Usa flexbox para alinhar itens */
+    justify-content: center;
+  }
+
+  .texto-com-traco::before {
+    content: "";
+    display: inline-block;
+    width: 300px; /* Largura do traço */
+    height: 1px; /* Altura do traço */
+    background-color: #000; /* Cor do traço */
+    vertical-align: middle; /* Alinha o traço com o texto */
+    z-index: 2; /* Garante que o texto fique sobre a imagem */
+  }
+
+  #countdown::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -15px;
+    right: 0;
+    margin: 0 auto;
+    width: 110%;
+    height: 120%;
+    border: 4px solid #888888;
+    border-radius: 15% 5% / 5% 15%; /* Torna o fundo arredondado */
+    z-index: -1; /* Posiciona o fundo atrás do texto */
   }
 
   .demais-infos {
     font-size: 18px;
-    padding: 40px 20px 0 20px;
-    margin-top: 40px;
+    padding: 20px 20px 0 20px;
+    margin-top: -150px;
   }
 
   .audio-controller {
-    transform: translateX(-50%);
+    margin-top: -100px;
     z-index: 2; /* Mantém o player acima da imagem */
   }
 
   .countdown-container {
-    position: relative; /* Garante que o shape fique dentro do contexto do countdown */
-    top: 45%; /* Posiciona o countdown conforme necessário */
+    top: 30%; /* Posiciona o countdown conforme necessário */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -318,11 +350,18 @@ p {
     z-index: 3; /* Define o z-index do container do countdown como 3 */
   }
 
+  .countdown-item-segundos {
+    display: none;
+  }
+
+  .countdown-item-minutos::after {
+    display: none;
+  }
+
   #countdown {
     display: flex;
     gap: 40px;
     justify-content: center;
-    position: relative;
   }
 }
 
