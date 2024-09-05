@@ -4,32 +4,37 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: 100%;
-}
-
-.header-container {
+  height: 100vh;
+  overflow-x: hidden;
   position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Centralizar informações */
-  padding: 30px; /* Distância do topo */
 }
 
 .imagem-container {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   height: 100vh;
   z-index: 1;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .imagem-principal {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.titulo-sobreposto2,
+#nomes-destaque,
+.countdown-container,
+.demais-infos,
+.texto-com-traco,
+.texto-com-traco::before {
+  position: absolute; /* Para que os elementos fiquem sobre a imagem */
+  z-index: 2; /* Garante que estejam acima da imagem */
+  text-align: center;
+  width: 100%; /* Garante que os elementos ocupem toda a largura da página */
+  color: #00353e;
 }
 
 h1 {
@@ -50,17 +55,14 @@ p {
 }
 
 .texto-com-traco {
+  top: 17%;
   display: flex; /* Usa flexbox para alinhar itens */
-  align-items: center; /* Alinha o traço verticalmente no centro com o texto */
   justify-content: center;
 }
 
 .texto-com-traco::before {
-  justify-content: center;
-  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
   content: "";
   display: inline-block;
-  margin-top: -80px;
   width: 350px; /* Largura do traço */
   height: 1px; /* Altura do traço */
   background-color: #000; /* Cor do traço */
@@ -70,8 +72,8 @@ p {
 
 #nomes-destaque {
   font-family: "Great Vibes", cursive;
+  top: 25%;
   font-weight: 200;
-  font-style: normal;
   color: #00353e;
   font-size: 100px;
 }
@@ -96,21 +98,18 @@ p {
 }
 
 .countdown-container {
-  position: absolute; /* Posiciona o container do countdown absolutamente */
-  top: 50%; /* Posiciona o container do countdown no meio da página */
-  left: 50%; /* Posiciona o container do countdown no meio da página */
-  transform: translate(-50%, -50%); /* Centraliza o container do countdown */
-  z-index: 3; /* Define o z-index do container do countdown como 3 */
-  display: flex;
+  top: 45%;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-top: -60px;
+  z-index: 3; /* Define o z-index do container do countdown como 3 */
 }
 
 #countdown {
-  z-index: 3; /* Define o z-index do elemento #countdown como 3 */
   display: flex;
   gap: 40px;
   justify-content: center;
+  position: relative;
 }
 
 .countdown-item-dia,
@@ -131,7 +130,6 @@ p {
   font-weight: normal;
   color: #00353e;
   font-family: "Montaga", serif;
-  position: relative;
 }
 
 #countdown-dias-texto,
@@ -150,10 +148,12 @@ p {
 #countdown::before {
   content: "";
   position: absolute;
-  top: -30%;
-  left: -5%;
-  width: 110%;
-  height: 170%;
+  top: -8px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 25%;
+  height: 120%;
   border: 4px solid #888888;
   border-radius: 15% 5% / 5% 15%; /* Torna o fundo arredondado */
   z-index: -1; /* Posiciona o fundo atrás do texto */
@@ -174,19 +174,13 @@ p {
 }
 
 .titulo-sobreposto2 {
-  justify-content: center;
+  top: 10%; /* Ajuste a posição vertical conforme necessário */
+  font-size: 60px;
   display: flex;
-  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
   font-family: "Montaga", serif;
-  z-index: 2; /* Garante que o texto fique sobre a imagem */
-  text-align: center; /* Centraliza o texto */
-  color: #00353e; /* Define a cor do texto como branca */
-  padding: 80px 40px 0 40px; /* Adiciona espaçamento ao redor do texto */
-  margin-top: 10px; /* Adiciona titulo-nome espaço abaixo da barra de navegação */
+  color: #00353e;
   font-size: 25px;
-  max-width: 80%; /* Limita a largura do texto */
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center;
 }
 
 #titulo-nome {
@@ -206,16 +200,10 @@ p {
 }
 
 .demais-infos {
-  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
-  z-index: 2; /* Garante que o texto fique sobre a imagem */
-  text-align: center; /* Centraliza o texto */
+  top: 58%;
+  justify-content: center;
   color: #00353e; /* Define a cor do texto como branca */
-  padding: 80px 40px 0 40px; /* Adiciona espaçamento ao redor do texto */
-  margin-top: 110px; /* Adiciona um espaço abaixo da barra de navegação */
   font-size: 25px;
-  max-width: 80%; /* Limita a largura do texto */
-  margin-left: auto;
-  margin-right: auto;
   font-family: "Montaga", serif;
   font-weight: 900;
 }
@@ -259,18 +247,18 @@ p {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #333;
+  background: #00353ea9;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   display: flex;
   gap: 10px;
-  z-index: 3; /* Aumenta o z-index para garantir que o player fique no topo */
+  z-index: 3;
 }
 
 .audio-controller button {
-  background: #fff;
-  color: #333;
+  background: #001e24;
+  color: white;
   border: none;
   padding: 10px;
   border-radius: 3px;
@@ -278,7 +266,7 @@ p {
 }
 
 .audio-controller button:hover {
-  background: #ddd;
+  background: #00353e;
 }
 
 .audio-description {
@@ -291,38 +279,63 @@ p {
 
 /* Media query para telas menores */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 50px; /* Reduz o tamanho da fonte para dispositivos móveis */
-  }
-
   #nomes-destaque {
-    font-size: 50px; /* Reduz o tamanho do destaque */
+    font-size: 50px;
+    margin: 10px 0;
   }
 
+  .imagem-container {
+    height: calc(100vh - 70px);
+  }
   .titulo-sobreposto2 {
-    padding: 20px; /* Reduz o padding para dispositivos móveis */
-    font-size: 20px; /* Reduz o tamanho da fonte para dispositivos móveis */
+    padding: 20px;
+    font-size: 40px;
   }
 
   #titulo-nome,
   #titulo-nome-the {
-    font-size: 40px; /* Ajusta o tamanho do texto para dispositivos móveis */
+    font-size: 40px;
   }
 
   .demais-infos {
-    font-size: 18px; /* Reduz o tamanho do texto das informações adicionais */
+    font-size: 18px;
     padding: 40px 20px 0 20px;
     margin-top: 40px;
   }
 
+  .audio-controller {
+    transform: translateX(-50%);
+    z-index: 2; /* Mantém o player acima da imagem */
+  }
+
   .countdown-container {
-    width: 100%;
-    padding: 0 20px;
-    margin-top: 0;
-    top: 60%;
+    position: relative; /* Garante que o shape fique dentro do contexto do countdown */
+    top: 45%; /* Posiciona o countdown conforme necessário */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3; /* Define o z-index do container do countdown como 3 */
   }
 
   #countdown {
-    gap: 20px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    position: relative;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-sobreposto2 {
+    font-size: 30px; /* Reduz mais a fonte para telas muito pequenas */
+  }
+
+  #nomes-destaque {
+    font-size: 40px; /* Reduz mais a fonte para telas pequenas */
+  }
+
+  .demais-infos {
+    font-size: 16px; /* Fonte menor para o texto "10 de novembro" */
   }
 }

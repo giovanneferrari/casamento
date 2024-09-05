@@ -54,7 +54,7 @@ function atualizarCountdown() {
 atualizarCountdown();
 
 let player;
-let isPlaying = true;
+let isPlaying = false;
 let currentTrackIndex = 0;
 
 // Lista de vídeos
@@ -69,6 +69,24 @@ function loadTrack(index) {
     currentTrackIndex = index;
     const videoId = playlist[currentTrackIndex].id;
     player.loadVideoById(videoId);
+
+    // Sempre que mudar de faixa, inicie o vídeo e atualize o ícone
+    player.playVideo();
+    isPlaying = true;
+    atualizarIconePlayPause(); // Atualiza o ícone
+  }
+}
+
+// Função para atualizar o ícone de play/pause
+function atualizarIconePlayPause() {
+  const playPauseIcon = document.getElementById("play-pause-icon");
+
+  if (isPlaying) {
+    playPauseIcon.classList.remove("fa-play");
+    playPauseIcon.classList.add("fa-pause");
+  } else {
+    playPauseIcon.classList.remove("fa-pause");
+    playPauseIcon.classList.add("fa-play");
   }
 }
 
@@ -81,7 +99,7 @@ function onYouTubeIframeAPIReady() {
       onReady: onPlayerReady,
     },
     playerVars: {
-      autoplay: 1,
+      autoplay: 0,
       loop: 1,
     },
   });
@@ -96,6 +114,10 @@ function onPlayerReady(event) {
   const nextBtn = document.getElementById("next-btn");
   const volumeUpBtn = document.getElementById("volume-up-btn");
   const volumeDownBtn = document.getElementById("volume-down-btn");
+
+  // Inicializa o ícone como "play"
+  playPauseIcon.classList.remove("fa-pause");
+  playPauseIcon.classList.add("fa-play");
 
   playPauseBtn.addEventListener("click", () => {
     if (isPlaying) {
