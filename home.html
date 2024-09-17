@@ -16,9 +16,6 @@
     />
   </head>
   <body>
-    <div class="imagem-container">
-      <img src="main-picture.jpg" alt="main-picture" class="imagem-principal" />
-    </div>
     <div class="header-container">
       <nav>
         <ul class="nav-left">
@@ -38,12 +35,28 @@
         </ul>
       </nav>
     </div>
+    <main>
     <div class="titulo-sobreposto">
       <p id="titulo-nome">Você foi convidado a fazer parte da celebração de</p>
       <h1 id="nomes-destaque">Amanda & Giovanne</h1>
-      <span id="datarodape">10 de Novembro de 2025 - São Paulo, SP</span>
-      <a href="countdown.html" id="botão">acessar contagem regressiva</a>
+      <div class="demais-infos">
+        <span id="datarodape">16h30 - 10 de novembro de 2025</span>
+        <span id="local">Espaço Barão de Itapetininga - São Paulo, SP</span>
+        <a href="countdown.html" id="botão">acessar contagem regressiva</a>
+      </div>
+    </main>
     </div>
-    <div class="shape"></div>
+    <div class="audio-only-container">
+      <div id="audio-placeholder"></div>
+    </div>
+      <div class="audio-controller">
+        <button id="previous-btn"><i class="fas fa-backward"></i></button>
+        <button id="play-pause-btn"><i id="play-pause-icon" class="fas fa-pause"></i></button>
+        <button id="next-btn"><i class="fas fa-forward"></i></button>
+        <button id="volume-up-btn"><i class="fas fa-volume-up"></i></button>
+        <button id="volume-down-btn"><i class="fas fa-volume-down"></i></button>
+      </div>
   </body>
+  <script src="script.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
 </html>

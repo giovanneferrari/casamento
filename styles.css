@@ -1,10 +1,16 @@
-body {
-  background-color: #f7f9fa;
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: 100%;
+}
+body {
+  background-color: #f7f9fa;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background: url("main-picture.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .logo {
@@ -71,12 +77,6 @@ body {
   pointer-events: none;
 }
 
-.imagem-principal {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .titulo-sobreposto {
   position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
   z-index: 2; /* Garante que o texto fique sobre a imagem */
@@ -90,16 +90,23 @@ body {
   margin-right: auto;
 }
 
+.demais-infos {
+  color: #00353e; /* Define a cor do texto como branca */
+  font-size: 25px;
+  font-family: "Montaga", serif;
+  font-weight: 900;
+  justify-content: center;
+  display: grid;
+  margin-top: 40px;
+}
+
 h1 {
   font-family: "Great Vibes", cursive;
-  font-weight: 400;
-  font-size: 120px;
-  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
-  z-index: 2; /* Garante que o texto fique sobre a imagem */
-  text-align: center; /* Centraliza o texto */
-  color: #00353e; /* Define a cor do texto como branca */
-  margin: 20px;
-  margin-bottom: 5px;
+  margin-top: 50px;
+  font-weight: 200;
+  color: #00353e;
+  font-size: 100px;
+  text-align: center;
 }
 
 p {
@@ -107,14 +114,14 @@ p {
   font-family: "Montaga", serif;
 }
 
-#datarodape {
+#local {
   font-family: "Montaga", serif;
-  font-size: 20px;
+  font-size: 18px;
   position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
   z-index: 2; /* Garante que o texto fique sobre a imagem */
   text-align: center; /* Centraliza o texto */
   color: #00353e; /* Define a cor do texto como branca */
-  margin: 10px;
+  font-weight: 300;
 }
 
 .shape {
@@ -145,6 +152,70 @@ p {
   background-color: #00353e;
   color: #ffffff;
   font-weight: 200;
+}
+
+.audio-only-container iframe {
+  width: 300px; /* Define a largura do iframe */
+  height: 45px; /* Altura suficiente para mostrar os controles */
+  border: 0;
+}
+
+.audio-only-container iframe::-webkit-media-controls-panel {
+  background-color: #000; /* Cor de fundo dos controles */
+}
+
+.audio-only-container iframe::before {
+  content: ""; /* Adiciona um overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 2;
+}
+
+.audio-only-container iframe {
+  width: 1px;
+  height: 1px;
+  border: 0;
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.audio-controller {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00353ea9;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.audio-controller button {
+  background: #001e24;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.audio-controller button:hover {
+  background: #00353e;
+}
+
+.audio-description {
+  text-align: center; /* Centraliza o texto */
+  font-family: Arial, sans-serif; /* Define a fonte */
+  font-size: 18px; /* Tamanho da fonte */
+  color: #333; /* Cor do texto */
+  margin-bottom: 10px; /* Espaço abaixo do descritivo */
 }
 
 /* Media query para telas menores */

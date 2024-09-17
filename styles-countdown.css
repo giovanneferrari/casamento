@@ -196,7 +196,7 @@ body {
 
 .audio-controller {
   position: fixed;
-  bottom: 20px;
+  bottom: 10px;
   right: 20px;
   background: #00353ea9;
   padding: 10px;
@@ -218,14 +218,6 @@ body {
 
 .audio-controller button:hover {
   background: #00353e;
-}
-
-.audio-description {
-  text-align: center; /* Centraliza o texto */
-  font-family: Arial, sans-serif; /* Define a fonte */
-  font-size: 18px; /* Tamanho da fonte */
-  color: #333; /* Cor do texto */
-  margin-bottom: 10px; /* Espaço abaixo do descritivo */
 }
 
 @media (max-width: 768px) {

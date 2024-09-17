@@ -1,5 +1,5 @@
 // Defina a data do evento
-const eventoData = new Date("2025-11-10T16:30:00");
+const eventoData = new Date("2025-11-08T16:30:00");
 
 // Função para calcular o tempo restante
 function calcularTempoRestante() {
