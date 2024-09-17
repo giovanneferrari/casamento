@@ -126,6 +126,27 @@ p {
   margin: 40px auto;
 }
 
+#botão {
+  background-color: transparent;
+  border: 0.5px solid #8b8b8b;
+  border-radius: 10px 0px 10px 10px;
+  justify-content: center;
+  display: grid;
+  font-size: 15px;
+  padding: 10px 15px;
+  margin-top: 20px;
+  color: #00353e;
+  font-family: "Montaga", serif;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+#botão:hover {
+  background-color: #00353e;
+  color: #ffffff;
+  font-weight: 200;
+}
+
 /* Media query para telas menores */
 @media (max-width: 768px) {
   .header-container {

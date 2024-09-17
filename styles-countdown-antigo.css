@@ -1,0 +1,397 @@
+body {
+  background-color: #f7f9fa;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.imagem-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.imagem-principal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.titulo-sobreposto2,
+#nomes-destaque,
+.countdown-container,
+.demais-infos,
+.texto-com-traco,
+.texto-com-traco::before {
+  position: absolute; /* Para que os elementos fiquem sobre a imagem */
+  z-index: 2; /* Garante que estejam acima da imagem */
+  text-align: center;
+  width: 100%; /* Garante que os elementos ocupem toda a largura da página */
+  color: #00353e;
+}
+
+h1 {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-size: 70px;
+  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
+  z-index: 2; /* Garante que o texto fique sobre a imagem */
+  text-align: center; /* Centraliza o texto */
+  color: #00353e; /* Define a cor do texto como branca */
+  margin-bottom: 5px;
+}
+
+p {
+  margin: 20px;
+  font-family: "Montaga", serif;
+}
+
+.texto-com-traco {
+  top: 17%;
+  display: flex; /* Usa flexbox para alinhar itens */
+  justify-content: center;
+}
+
+.texto-com-traco::before {
+  content: "";
+  display: inline-block;
+  width: 350px; /* Largura do traço */
+  height: 1px; /* Altura do traço */
+  background-color: #000; /* Cor do traço */
+  vertical-align: middle; /* Alinha o traço com o texto */
+  z-index: 2; /* Garante que o texto fique sobre a imagem */
+}
+
+#nomes-destaque {
+  font-family: "Great Vibes", cursive;
+  top: 20%;
+  font-weight: 200;
+  color: #00353e;
+  font-size: 100px;
+  text-align: center;
+}
+
+#datarodape {
+  font-family: "Montaga", serif;
+  font-size: 20px;
+  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
+  z-index: 2; /* Garante que o texto fique sobre a imagem */
+  text-align: center; /* Centraliza o texto */
+  color: #00353e; /* Define a cor do texto como branca */
+  margin: 10px;
+}
+
+.shape {
+  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
+  z-index: 0; /* Garante que o texto fique sobre a imagem */
+  height: 150vh;
+  width: 250vh;
+  background-color: white;
+  margin: 40px auto;
+}
+
+.countdown-container {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza horizontal e verticalmente */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3; /* Define o z-index do container do countdown como 3 */
+}
+
+#countdown {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  position: relative;
+}
+
+.countdown-item-dia,
+.countdown-item-hora,
+.countdown-item-minutos,
+.countdown-item-segundos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+#countdown-dias,
+#countdown-horas,
+#countdown-minutos,
+#countdown-segundos {
+  font-size: 50px;
+  font-weight: normal;
+  color: #00353e;
+  font-family: "Montaga", serif;
+}
+
+#countdown-dias-texto,
+#countdown-horas-texto,
+#countdown-minutos-texto,
+#countdown-segundos-texto {
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 900;
+  color: #00353e;
+  font-family: "Montaga", serif;
+  position: relative;
+}
+
+/* Shape de fundo */
+#countdown::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 25%;
+  height: 120%;
+  border: 4px solid #888888;
+  border-radius: 15% 5% / 5% 15%; /* Torna o fundo arredondado */
+  z-index: -1; /* Posiciona o fundo atrás do texto */
+}
+
+.countdown-item-dia::after,
+.countdown-item-hora::after,
+.countdown-item-minutos::after {
+  content: "";
+  position: absolute;
+  right: -20px; /* Ajusta a posição horizontal do traço, entre os elementos */
+  top: 50%;
+  transform: translateY(-50%); /* Centraliza o traço verticalmente */
+  width: 1px; /* Define a largura do traço vertical */
+  height: 70px; /* Define a altura do traço vertical */
+  background-color: #888888; /* Cor do traço */
+  z-index: 1; /* Coloca o traço atrás do texto */
+}
+
+.titulo-sobreposto2 {
+  top: 10%; /* Ajuste a posição vertical conforme necessário */
+  font-size: 60px;
+  display: flex;
+  font-family: "Montaga", serif;
+  color: #00353e;
+  font-size: 25px;
+  justify-content: center;
+}
+
+#titulo-nome {
+  font-family: "Xanh Mono", monospace;
+  font-weight: 200;
+  font-style: normal;
+  color: #00353e;
+  font-size: 60px;
+}
+
+#titulo-nome-the {
+  font-family: "Great Vibes", cursive;
+  font-weight: 500;
+  font-style: normal;
+  color: #00353e;
+  font-size: 60px;
+}
+
+.demais-infos {
+  top: 58%;
+  justify-content: center;
+  color: #00353e; /* Define a cor do texto como branca */
+  font-size: 25px;
+  font-family: "Montaga", serif;
+  font-weight: 900;
+}
+
+#local {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.audio-only-container iframe {
+  width: 300px; /* Define a largura do iframe */
+  height: 45px; /* Altura suficiente para mostrar os controles */
+  border: 0;
+}
+
+.audio-only-container iframe::-webkit-media-controls-panel {
+  background-color: #000; /* Cor de fundo dos controles */
+}
+
+.audio-only-container iframe::before {
+  content: ""; /* Adiciona um overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 2;
+}
+
+.audio-only-container iframe {
+  width: 1px;
+  height: 1px;
+  border: 0;
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.audio-controller {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00353ea9;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.audio-controller button {
+  background: #001e24;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.audio-controller button:hover {
+  background: #00353e;
+}
+
+.audio-description {
+  text-align: center; /* Centraliza o texto */
+  font-family: Arial, sans-serif; /* Define a fonte */
+  font-size: 18px; /* Tamanho da fonte */
+  color: #333; /* Cor do texto */
+  margin-bottom: 10px; /* Espaço abaixo do descritivo */
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  #nomes-destaque {
+    font-size: 120px;
+    margin-top: -50px;
+  }
+
+  .imagem-container {
+    height: calc(100vh - 70px);
+  }
+  .titulo-sobreposto2 {
+    padding: 20px;
+    font-size: 40px;
+    margin-top: -50px;
+  }
+
+  #titulo-nome,
+  #titulo-nome-the {
+    font-size: 50px;
+    margin: 10px;
+  }
+
+  .texto-com-traco {
+    top: 12%;
+    display: flex; /* Usa flexbox para alinhar itens */
+    justify-content: center;
+  }
+
+  .texto-com-traco::before {
+    content: "";
+    display: inline-block;
+    width: 300px; /* Largura do traço */
+    height: 1px; /* Altura do traço */
+    background-color: #000; /* Cor do traço */
+    vertical-align: middle; /* Alinha o traço com o texto */
+    z-index: 2; /* Garante que o texto fique sobre a imagem */
+  }
+
+  #countdown::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -15px;
+    right: 0;
+    margin: 0 auto;
+    width: 110%;
+    height: 120%;
+    border: 4px solid #888888;
+    border-radius: 15% 5% / 5% 15%; /* Torna o fundo arredondado */
+    z-index: -1; /* Posiciona o fundo atrás do texto */
+  }
+
+  .demais-infos {
+    font-size: 18px;
+    padding: 20px 20px 0 20px;
+    margin-top: -150px;
+  }
+
+  .audio-controller {
+    position: relative;
+    margin-top: -30px;
+    z-index: 2; /* Mantém o player acima da imagem */
+  }
+
+  .countdown-container {
+    top: 30%; /* Posiciona o countdown conforme necessário */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3; /* Define o z-index do container do countdown como 3 */
+  }
+
+  .countdown-item-segundos {
+    display: none;
+  }
+
+  .countdown-item-minutos::after {
+    display: none;
+  }
+
+  #countdown {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-sobreposto2 {
+    font-size: 30px; /* Reduz mais a fonte para telas muito pequenas */
+  }
+
+  #nomes-destaque {
+    font-size: 50px; /* Reduz mais a fonte para telas pequenas */
+    margin-top: -30px;
+  }
+
+  .demais-infos {
+    font-size: 16px; /* Fonte menor para o texto "10 de novembro" */
+  }
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
