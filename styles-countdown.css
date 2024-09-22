@@ -195,9 +195,9 @@ body {
 }
 
 .audio-controller {
-  position: fixed;
-  bottom: 10px;
-  right: 20px;
+  position: absolute;
+  bottom: 2%; 
+  right: 1%;
   background: #00353ea9;
   padding: 10px;
   border-radius: 5px;
@@ -225,9 +225,8 @@ body {
     padding: 0;
   }
 
-  .audio-controller {
-    bottom: 8vh;
-    right: 3vh;
+  body {
+    padding: 10px;
   }
 
   #nomes-destaque {
