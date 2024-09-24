@@ -1,16 +1,25 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: #f7f9fa;
   font-family: Arial, sans-serif;
-  height: 100vh;
-  width: 100vw;
-  background: url("main-picture.jpg");
+  height: 100%;
+  width: 100%;
+}
+
+.background {
+  background: url("../imagens/main-picture.jpg");
   background-size: cover;
   background-position: center;
+  height: 100vh;
 }
 
 .logo {
@@ -18,12 +27,13 @@ body {
   zoom: 20%; /* AJUSTAR LOGO DEPOIS */
 }
 
-.header-container {
-  position: relative;
-  z-index: 2;
+header {
+  position: absolute;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center; /* Centralizar informações */
+  width: 100%;
   padding: 30px; /* Distância do topo */
 }
 
@@ -67,23 +77,11 @@ body {
   font-family: "Montaga", serif;
 }
 
-.imagem-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 1;
-  pointer-events: none;
-}
-
 .titulo-sobreposto {
-  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
-  z-index: 2; /* Garante que o texto fique sobre a imagem */
   text-align: center; /* Centraliza o texto */
   color: #00353e; /* Define a cor do texto como branca */
   padding: 20px; /* Adiciona espaçamento ao redor do texto */
-  margin-top: 15px; /* Adiciona um espaço abaixo da barra de navegação */
+  padding-top: 200px;
   font-size: 25px;
   max-width: 80%; /* Limita a largura do texto */
   margin-left: auto;
@@ -109,9 +107,73 @@ h1 {
   text-align: center;
 }
 
-p {
+.titulo-sobreposto p {
   margin: 10px;
   font-family: "Montaga", serif;
+}
+
+.historia {
+ padding: 30px;
+ border-radius: 5px;
+ height: 400px;
+ background-color: white;
+ padding: 4% 10%;
+ display: flex;
+ gap: 50px;
+ align-items: center;
+}
+
+#historia-foto > h2 {
+  color: #0c6d7e;
+  font-family: "Montaga", serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+#historia-texto {
+  color: #0c6d7e;
+  font-family: "Montaga", serif;
+  font-weight: 400;
+  text-align: justify;
+  font-size: 15px;
+}
+
+#historia-texto > h2 {
+  color: #0c6d7e;
+  font-family: "Montaga", serif;
+  font-weight: bold;
+  text-align: justify;
+  font-size: 20px;
+  margin-bottom: 2%;
+}
+
+#historia-foto > h2::after {
+  content:'';
+  width: 75%;
+  background-color: #00353e;
+  height: 2px;
+  margin-top: 3px;
+  display: flex;
+  margin-inline: auto;
+}
+
+#historia-texto > p {
+  color: rgb(0, 87, 72);
+  width: auto;
+  text-align: justify;
+}
+
+#foto-buque {
+width: 300px;
+margin-top: 2%;
+}
+
+#tempo-juntos {
+  font-size: 16px;
+  color: #00353e;
 }
 
 #local {

@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amanda & Giovanne</title>
-    <link rel="icon" type="image/png" size=32x32" href="thumb.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" size=32x32" href="imagens/thumb.png" />
+    <link rel="stylesheet" href="styles/styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montaga&display=swap"
       rel="stylesheet"
@@ -14,18 +14,22 @@
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
       rel="stylesheet"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
   </head>
   <body>
-    <div class="header-container">
+    <header id="header">
       <nav>
         <ul class="nav-left">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#historia">História</a></li>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#historia-foto">História</a></li>
           <li><a href="#grandedia">Grande dia</a></li>
         </ul>
       </nav>
       <div class="logo">
-        <img src="logo.png" alt="logo" />
+        <img src="imagens/logo.png" alt="logo" />
       </div>
       <nav>
         <ul class="nav-right">
@@ -34,18 +38,27 @@
           <li><a href="#presentes">Presentes</a></li>
         </ul>
       </nav>
-    </div>
-    <main>
+    </header>
+    <main class="background">
     <div class="titulo-sobreposto">
       <p id="titulo-nome">Você foi convidado a fazer parte da celebração de</p>
       <h1 id="nomes-destaque">Amanda & Giovanne</h1>
       <div class="demais-infos">
         <span id="datarodape">16h30 - 10 de novembro de 2025</span>
         <span id="local">Espaço Barão de Itapetininga - São Paulo, SP</span>
-        <a href="countdown.html" id="botão">acessar contagem regressiva</a>
+        <a href="Pages/countdown.html" id="botão">acessar contagem regressiva</a>
       </div>
     </main>
+  <div class="historia">
+    <div id="historia-foto">
+    <h2>Nossa história</h2>
+    <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" id="foto-buque">
     </div>
+    <div id="historia-texto">
+      <h2>14/12/2023 - Início do namoro <p id="tempo-juntos"></p></h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A nemo possimus exercitationem beatae provident nihil enim perspiciatis voluptas commodi error obcaecati molestias reprehenderit laborum architecto eos debitis, aut voluptatibus at. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, dolor inventore, distinctio fugiat maxime corrupti, ipsum error quod sequi laborum cum magnam provident asperiores! Corporis, cupiditate? Laudantium sit neque dolorem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis, veritatis incidunt laborum accusamus expedita optio velit debitis, sunt consequatur deserunt tempora molestias provident, quisquam animi doloremque earum sapiente? Id, quas?</p>
+    </div>
+  </div>
     <div class="audio-only-container">
       <div id="audio-placeholder"></div>
     </div>
@@ -57,6 +70,6 @@
         <button id="volume-down-btn"><i class="fas fa-volume-down"></i></button>
       </div>
   </body>
-  <script src="script.js"></script>
+  <script src="scripts/script-home.js"></script>
   <script src="https://www.youtube.com/iframe_api"></script>
 </html>
