@@ -282,24 +282,100 @@ margin-top: 2%;
 
 /* Media query para telas menores */
 @media (max-width: 768px) {
-  .header-container {
-    flex-direction: column; /* Empilha logo e botões */
-    align-items: center; /* Centraliza logo e botões */
+
+  
+  .background {
+    height: 85vh;
+    background-size: cover;
   }
 
-  .logo {
-    margin-bottom: 10px; /* Adiciona espaço entre o logo e os botões */
-  }
+.logo {
+  margin: 5px auto;
+  zoom: 25%; /* Ajusta a logo para caber melhor */
+}
 
-  .nav-left,
-  .nav-right {
-    flex-direction: column; /* Alinha os botões verticalmente */
-    justify-content: center; /* Centraliza os botões */
-    align-items: center; /* Centraliza os botões */
-  }
+.nav-left, .nav-right {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 0 0;
+}
 
-  .nav-left li,
-  .nav-right li {
-    margin: 5px 0; /* Adiciona margem entre os itens verticalmente */
-  }
+.nav-left li, .nav-right li {
+  margin: 7px 0;
+}
+
+.nav-left a, .nav-right a {
+  font-size: 18px;
+}
+
+.titulo-sobreposto {
+  font-size: 18px;
+  max-width: 100%; /* Mais espaço para conteúdo */
+  margin: 0;
+}
+
+h1 {
+  font-size: 60px;
+  margin-top: 30px;
+}
+
+h2 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+p {
+  text-align: center;
+}
+
+.demais-infos {
+  font-size: 18px;
+}
+
+#botão {
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.historia {
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  height: auto; /* Altura automática */
+}
+
+#historia-foto {
+display: grid;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+#historia-foto > h2 {
+  width: auto;
+}
+
+#historia-foto img {
+  width: 100%; /* Imagem ocupa largura total */
+  height: auto; /* Altura proporcional */
+}
+
+#historia-texto {
+  font-size: 14px;
+}
+
+/* Controlador de áudio */
+.audio-controller {
+  bottom: 10px;
+  right: 10px;
+  padding: 8px;
+}
+
+.audio-controller button {
+  padding: 8px;
+}
+
 }
