@@ -19,6 +19,7 @@ body {
   background: url("../imagens/main-picture.jpg");
   background-size: cover;
   background-position: center bottom;
+  background-attachment: fixed;
   height: 100vh;
 }
 
