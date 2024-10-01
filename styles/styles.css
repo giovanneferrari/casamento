@@ -25,7 +25,7 @@ body {
 
 .logo {
   margin: 0 80px;
-  zoom: 20%; /* AJUSTAR LOGO DEPOIS */
+  zoom: 20%;
 }
 
 header {
@@ -33,9 +33,9 @@ header {
   z-index: 100;
   display: flex;
   align-items: center;
-  justify-content: center; /* Centralizar informações */
+  justify-content: center;
   width: 100%;
-  padding: 30px; /* Distância do topo */
+  padding: 30px;
 }
 
 .nav-left {
@@ -122,6 +122,7 @@ h1 {
  display: flex;
  gap: 50px;
  align-items: center;
+ box-shadow: 8px 3px 20px 0px inset rgba(0, 0, 0, 0.288);
 }
 
 #historia-foto > h2 {
@@ -178,24 +179,21 @@ margin-top: 2%;
 }
 
 .mapa {
-  padding: 30px;
-  height: 700px;
-  background: url('https://images.unsplash.com/photo-1460978812857-470ed1c77af0?q=80&w=1595&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center center;
-  padding: 4% 10%;
-  display: flex;
-  gap: 50px;
+  height: 900px;
+  background-color: #F2F2F2;
+  padding: 2% 10%;
+  justify-content: center;
   align-items: center;
 }
 
 .mapa-box {
-  width: 80vw;
-  height: 500px;
+  max-width: 90vw;
+  height: auto;
   border-radius: 15px;
   padding: 20px 30px;
-  background-color: #0c6d7ed3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mapa-box > h2 {
@@ -208,36 +206,111 @@ margin-top: 2%;
 }
 
 #map-content {
-  width: 100%;
-  height: 92%;
+  width: 1000px;
+  height: auto;
   border-radius: 15px;
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
 }
 
 #mapa-content-texto {
   color: white;
+  width: auto;
 }
 
 #mapa-content-texto h2 {
-  color: white;
+  color:#002b33;
   font-family: "Montaga", serif;
   font-weight: bold;
-  text-align: justify;
-  font-size: 20px;
-  margin-bottom: 2%;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 5%;
 }
 
 #mapa-content-texto p {
-  color: rgb(255, 255, 255);
+  color:#0c6d7e;
   width: auto;
   text-align: justify;
 }
 
+.mapa-google-maps {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+
 iframe {
-  width: 100%;
-  height: 100%;
+  width: 1000px;
+  height: 350px;
   border-radius: 10px;
+  justify-self: center;
+  margin-bottom: 30px;
+}
+
+#video {
+  width: 100%;
+  height: auto;
+}
+
+.direcionamentos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#botao-maps-waze {
+  padding: 10px 20px;
+  width: 400px;
+  height: 5vh;
+  margin-top: 30px;
+  margin: auto;
+  background-color:#05C8F7;
+  cursor: pointer;
+  border-radius: 25px;
+  border: 2px solid #0087a8;
+}
+
+#botao-maps-google {
+  padding: 10px 20px;
+  width: 400px;
+  height: auto;
+  margin-top: 30px;
+  margin: auto;
+  background-color:#ffffff;
+  cursor: pointer;
+  border-radius: 25px;
+  border: 2px solid #00A66C;
+}
+
+.mapa-google-maps a {
+  text-decoration: none;
+  color: #646463;
+}
+
+#botao-maps-waze:hover, #botao-maps-waze:hover * {
+  background-color: #0093b8;
+  color: white;
+}
+
+#botao-maps-waze:hover {
+  color: white;
+}
+
+#botao-maps-google:hover, #botao-maps-google:hover * {
+  background-color: #00A66C;
+  color: white;
+}
+
+.direcionamentos button img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 #local {
@@ -259,7 +332,7 @@ iframe {
   margin: 40px auto;
 }
 
-#botão {
+#botão-count {
   background-color: transparent;
   border: 0.5px solid #8b8b8b;
   border-radius: 10px 0px 10px 10px;
@@ -274,7 +347,7 @@ iframe {
   transition: 0.5s;
 }
 
-#botão:hover {
+#botão-count:hover {
   background-color: #00353e;
   color: #ffffff;
   font-weight: 200;
@@ -349,7 +422,7 @@ iframe {
 
   
   .background {
-    height: 85vh;
+    height: 99vh;
     background-size: cover;
   }
 

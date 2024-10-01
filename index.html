@@ -33,7 +33,7 @@
       </div>
       <nav>
         <ul class="nav-right">
-          <li><a href="#rota">Mapa</a></li>
+          <li><a href="#map-content">Mapa</a></li>
           <li><a href="#inscrição">Inscrição</a></li>
           <li><a href="#presentes">Presentes</a></li>
         </ul>
@@ -46,7 +46,7 @@
       <div class="demais-infos">
         <span id="datarodape">16h30 - 10 de novembro de 2025</span>
         <span id="local">Espaço Barão de Itapetininga - São Paulo, SP</span>
-        <a href="Pages/countdown.html" id="botão">acessar contagem regressiva</a>
+        <a href="Pages/countdown.html" id="botão-count">acessar contagem regressiva</a>
       </div>
     </main>
   <div class="historia">
@@ -61,13 +61,20 @@
   </div>
   <div class="mapa">
     <div class="mapa-box">
-    <h2>Onde será nossa celebração?</h2>
     <div id="map-content">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.79781916394!2d-47.10121708898633!3d-22.772883279263407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c04b68f7100f%3A0x965b4a543ead1d16!2zRXNwYcOnbyBCYXLDo28!5e0!3m2!1spt-BR!2sbr!4v1727386861548!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <div id="mapa-content-texto">
-      <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est doloremque quos</h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam nam cupiditate a. Ab illum officiis minus, reiciendis soluta, iusto non eum hic suscipit, sequi nostrum saepe vel magni libero similique?</p>
+      <iframe src="https://player.vimeo.com/video/379308487?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Espaço Barão" id="video"></iframe>
+        <div id="mapa-content-texto">
+        <h2>📌 Espaço Barão - Paulínia</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam nam cupiditate a. Ab illum officiis minus, reiciendis soluta, iusto non eum hic suscipit, sequi nostrum saepe vel magni libero similique? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa earum soluta obcaecati, est ad voluptates delectus natus ex suscipit atque ab voluptatibus distinctio aperiam itaque maxime id debitis praesentium dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quia, adipisci accusantium nobis deleniti labore amet voluptatibus cupiditate rerum doloribus harum et libero consectetur. Inventore quod rerum maxime eveniet harum.</p>
+      </div>
     </div>
+    </div>
+    <div class="mapa-google-maps">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.79781916394!2d-47.10121708898633!3d-22.772883279263407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c04b68f7100f%3A0x965b4a543ead1d16!2zRXNwYcOnbyBCYXLDo28!5e0!3m2!1spt-BR!2sbr!4v1727386861548!5m2!1spt-BR!2sbr" width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="direcionamentos">
+        <button id="botao-maps-waze"><a href="https://ul.waze.com/ul?preview_venue_id=205063716.2050637163.2260541&navigate=yes&utm_campaign=iframe_search&utm_source=direct_link&utm_medium=lm_share_location" target="_blank"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/waze-icon.png" alt=""> Coordenadas - Waze</img></a></button>
+        <button id="botao-maps-google"><a href="https://maps.app.goo.gl/wGGtEoboGL17TM4M9" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2991/2991231.png" alt=""> Coordenadas - Google Maps</a></button>
+      </div>
     </div>
   </div>
     <div class="audio-only-container">
