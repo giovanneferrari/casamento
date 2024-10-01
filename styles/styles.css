@@ -422,7 +422,7 @@ iframe {
 
   
   .background {
-    height: 99vh;
+    height: 70vh;
     background-size: cover;
   }
 
@@ -502,6 +502,34 @@ text-align: center;
 
 #historia-texto {
   font-size: 14px;
+}
+
+.mapa {
+  height: auto;
+  padding: 30px 20px;
+}
+
+#map-content {
+  display: block;
+}
+
+.mapa-box {
+  padding: 0;
+}
+
+.mapa-google-maps iframe {
+  width: 92vw;
+  height: 200px;
+  margin-top: 30px;
+}
+
+#mapa-content-texto p {
+  font-size: 14px;
+}
+
+.direcionamentos {
+  display: grid;
+  gap: 0.85vh;
 }
 
 /* Controlador de áudio */
