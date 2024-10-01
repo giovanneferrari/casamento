@@ -306,7 +306,7 @@ iframe {
   color: white;
 }
 
-.direcionamentos button img {
+.direcionamentos a img {
   width: 20px;
   height: 20px;
   object-fit: cover;
