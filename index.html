@@ -6,18 +6,10 @@
     <title>Amanda & Giovanne</title>
     <link rel="icon" type="image/png" size=32x32" href="imagens/thumb.png" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montaga&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
-      rel="stylesheet"
-    />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-  />
+    <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
     <header id="header">
@@ -25,7 +17,7 @@
         <ul class="nav-left">
           <li><a href="#header">Home</a></li>
           <li><a href="#historia-foto">História</a></li>
-          <li><a href="#grandedia">Grande dia</a></li>
+          <li><a href="#video-barao">Mapa</a></li>
         </ul>
       </nav>
       <div class="logo">
@@ -33,9 +25,9 @@
       </div>
       <nav>
         <ul class="nav-right">
-          <li><a href="#map-content">Mapa</a></li>
           <li><a href="#inscrição">Inscrição</a></li>
           <li><a href="#presentes">Presentes</a></li>
+          <li><a href="#mural">Mural</a></li>
         </ul>
       </nav>
     </header>
@@ -45,7 +37,7 @@
       <h1 id="nomes-destaque">Amanda & Giovanne</h1>
       <div class="demais-infos">
         <span id="datarodape">16h30 - 10 de novembro de 2025</span>
-        <span id="local">Espaço Barão de Itapetininga - São Paulo, SP</span>
+        <span id="local">Espaço Barão - Paulínia, SP</span>
         <a href="Pages/countdown.html" id="botão-count">acessar contagem regressiva</a>
       </div>
     </main>
@@ -54,26 +46,54 @@
     <h2>Nossa história</h2>
     <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" id="foto-buque">
     </div>
-    <div id="historia-texto">
-      <h2>14/12/2013 - Início do namoro <p id="tempo-juntos"></p></h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A nemo possimus exercitationem beatae provident nihil enim perspiciatis voluptas commodi error obcaecati molestias reprehenderit laborum architecto eos debitis, aut voluptatibus at. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, dolor inventore, distinctio fugiat maxime corrupti, ipsum error quod sequi laborum cum magnam provident asperiores! Corporis, cupiditate? Laudantium sit neque dolorem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis, veritatis incidunt laborum accusamus expedita optio velit debitis, sunt consequatur deserunt tempora molestias provident, quisquam animi doloremque earum sapiente? Id, quas?</p>
+    <div class="historia-texto">
+      <h2>14/12/2013 - Início do namoro</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A nemo possimus exercitationem beatae provident nihil enim perspiciatis voluptas commodi error obcaecati molestias reprehenderit laborum architecto eos debitis, aut voluptatibus at. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, dolor inventore, distinctio fugiat maxime corrupti, ipsum error quod sequi laborum cum magnam provident asperiores! Corporis, cupiditate? Laudantium sit neque dolorem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis, veritatis incidunt laborum accusamus expedita optio velit debitis, sunt consequatur deserunt tempora molestias provident, quisquam animi doloremque earum sapiente? Id, quas? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, aliquid mollitia error cum aperiam ducimus minus blanditiis non facere? Accusantium odio voluptatem sunt commodi, eaque necessitatibus temporibus ipsam architecto odit.</p>
+      <div class="historia-texto-numbers">
+        <div id="tempo-juntos-anos">
+          <h3 id="anos-juntos">X</h3>
+          <p id="tempo-juntos-paragrafo">anos</p>
+        </div>
+        <div id="tempo-juntos-dias">
+          <h3 id="dias-juntos">X</h3>
+          <p id="tempo-juntos-paragrafo">dias</p>
+        </div>
+        <div id="tempo-juntos-minutos">
+          <h3 id="minutos-juntos">X</h3>
+          <p id="tempo-juntos-paragrafo">minutos</p>
+        </div>
+      </div>
     </div>
+    <button id="botao-scroll" title="Voltar ao topo">⬆</button>
   </div>
   <div class="mapa">
     <div class="mapa-box">
     <div id="map-content">
-      <iframe src="https://player.vimeo.com/video/379308487?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Espaço Barão" id="video"></iframe>
+      <iframe src="https://player.vimeo.com/video/379308487?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="600" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Espaço Barão" id="video-barao"></iframe>
         <div id="mapa-content-texto">
-        <h2>📌 Espaço Barão - Paulínia</h2>
+        <h2>📌 Espaço Barão, Paulínia</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam nam cupiditate a. Ab illum officiis minus, reiciendis soluta, iusto non eum hic suscipit, sequi nostrum saepe vel magni libero similique? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa earum soluta obcaecati, est ad voluptates delectus natus ex suscipit atque ab voluptatibus distinctio aperiam itaque maxime id debitis praesentium dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quia, adipisci accusantium nobis deleniti labore amet voluptatibus cupiditate rerum doloribus harum et libero consectetur. Inventore quod rerum maxime eveniet harum.</p>
       </div>
     </div>
     </div>
     <div class="mapa-google-maps">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.79781916394!2d-47.10121708898633!3d-22.772883279263407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c04b68f7100f%3A0x965b4a543ead1d16!2zRXNwYcOnbyBCYXLDo28!5e0!3m2!1spt-BR!2sbr!4v1727386861548!5m2!1spt-BR!2sbr" width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.79781916394!2d-47.10121708898633!3d-22.772883279263407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c04b68f7100f%3A0x965b4a543ead1d16!2zRXNwYcOnbyBCYXLDo28!5e0!3m2!1spt-BR!2sbr!4v1727386861548!5m2!1spt-BR!2sbr" width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mapa-google"></iframe>
       <div class="direcionamentos">
         <a href="https://ul.waze.com/ul?preview_venue_id=205063716.2050637163.2260541&navigate=yes&utm_campaign=iframe_search&utm_source=direct_link&utm_medium=lm_share_location" target="_blank" id="botao-maps-waze"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/waze-icon.png" alt=""> Coordenadas - Waze</img></a>
         <a href="https://maps.app.goo.gl/wGGtEoboGL17TM4M9" target="_blank" id="botao-maps-google"><img src="https://cdn-icons-png.flaticon.com/512/2991/2991231.png" alt=""> Coordenadas - Google Maps</a>
+      </div>
+    </div>
+  </div>
+  <div class="formulario">
+    <div id="formulario-container">
+      <h2 id="inscrição">🎯 CONFIRMAÇÃO</h2>
+      <form id="formulario-infos">
+          <input type="text" placeholder="Nome" required>
+          <input type="email" placeholder="e-mail" required>
+          <input list="text" placeholder="Conjugês ou família?" required>
+          <input type="tel" placeholder="número do celular" pattern="\(\d{2}\)\s\d\s\d{4}-\d{4}" inputmode="numeric" maxlength="15"  required>
+          <input type="submit" id="formulario-infos-botao" value="ENVIAR" required>
+      </form>
       </div>
     </div>
   </div>

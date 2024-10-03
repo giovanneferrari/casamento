@@ -128,9 +128,49 @@ function onPlayerReady(event) {
 
 const dataInicio = new Date('2013-12-14');
 const dataAtual = new Date();
+
+// Diferença em milissegundos
 const diferencaTempo = dataAtual - dataInicio;
-const diasJuntos = Math.floor(diferencaTempo / (1000 * 60 * 60 * 24));
 
+// Convertendo para anos, meses e minutos
+const milissegundosPorAno = 1000 * 60 * 60 * 24 * 365.25; // Considerando anos bissextos
+const milissegundosPorDia = 1000 * 60 * 60 * 24; // Aproximadamente 30.44 dias por mês
+
+// Anos completos
+const anosJuntos = Math.floor(diferencaTempo / milissegundosPorAno);
+
+// Calculando meses totais
+const diasJuntos = Math.floor(diferencaTempo / milissegundosPorDia);
+
+// Minutos totais
+const minutosJuntos = Math.floor(diferencaTempo / (1000 * 60));
+
+// Formatando os valores para o formato brasileiro
+const anosFormatados = anosJuntos.toLocaleString('pt-BR');
 const diasFormatados = diasJuntos.toLocaleString('pt-BR');
+const minutosFormatados = minutosJuntos.toLocaleString('pt-BR');
 
-document.getElementById('tempo-juntos').textContent = `${diasFormatados} dias juntos e contando...`
+// Exibindo o resultado no HTML
+document.getElementById('anos-juntos').textContent = `${anosFormatados}`
+document.getElementById('dias-juntos').textContent = `${diasFormatados}`
+document.getElementById('minutos-juntos').textContent = `${minutosFormatados}`
+
+// Pega o botão
+const scrollTopBtn = document.getElementById('botao-scroll');
+
+// Mostra o botão quando o usuário rolar 20px para baixo
+window.onscroll = function() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+};
+
+// Rola para o topo da página quando o usuário clicar no botão
+scrollTopBtn.onclick = function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Rolagem suave
+  });
+};

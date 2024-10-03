@@ -113,6 +113,70 @@ h1 {
   font-family: "Montaga", serif;
 }
 
+#local {
+  font-family: "Montaga", serif;
+  font-size: 18px;
+  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
+  z-index: 2; /* Garante que o texto fique sobre a imagem */
+  text-align: center; /* Centraliza o texto */
+  color: #00353e; /* Define a cor do texto como branca */
+  font-weight: 300;
+}
+/* Botão countdown */
+#botão-count {
+  background-color: transparent;
+  border: 0.5px solid #8b8b8b;
+  border-radius: 10px 0px 10px 10px;
+  justify-content: center;
+  display: grid;
+  font-size: 15px;
+  padding: 10px 15px;
+  margin-top: 20px;
+  color: #00353e;
+  font-family: "Montaga", serif;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+#botão-count:hover {
+  background-color: #00353e;
+  color: #ffffff;
+  font-weight: 200;
+}
+
+.shape {
+  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
+  z-index: 0; /* Garante que o texto fique sobre a imagem */
+  height: 150vh;
+  width: 250vh;
+  background-color: white;
+  margin: 40px auto;
+}
+
+/* Estilizando o botão suspenso */
+#botao-scroll {
+  display: none; /* Inicialmente oculto */
+  position: fixed; /* Fica suspenso na tela */
+  bottom: 20px; /* Distância do rodapé */
+  left: 20px; /* Distância da lateral direita */
+  z-index: 99; /* Garante que o botão fique acima de outros elementos */
+  background-color: #00353e; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none; /* Sem borda */
+  padding: 15px; /* Tamanho do botão */
+  border-radius: 15px;
+  width: 3vw;
+  cursor: pointer; /* Mostra o cursor de clique */
+  font-size: 18px; /* Tamanho da fonte */
+}
+
+/* Efeito hover para o botão */
+#botao-scroll:hover {
+  background:#001E24;
+  color: white;
+}
+
+/* Nossa história */
 .historia {
  padding: 30px;
  border-radius: 5px;
@@ -135,7 +199,7 @@ h1 {
   margin-bottom: 15px;
 }
 
-#historia-texto {
+.historia-texto {
   color: #0c6d7e;
   font-family: "Montaga", serif;
   font-weight: 400;
@@ -143,13 +207,13 @@ h1 {
   font-size: 15px;
 }
 
-#historia-texto > h2 {
+.historia-texto > h2 {
   color: #0c6d7e;
   font-family: "Montaga", serif;
   font-weight: bold;
   text-align: justify;
   font-size: 20px;
-  margin-bottom: 2%;
+  margin-bottom: 1.2%;
 }
 
 #historia-foto > h2::after {
@@ -162,7 +226,7 @@ h1 {
   margin-inline: auto;
 }
 
-#historia-texto > p {
+.historia-texto > p {
   color: rgb(0, 87, 72);
   width: auto;
   text-align: justify;
@@ -173,13 +237,65 @@ width: 300px;
 margin-top: 2%;
 }
 
-#tempo-juntos {
-  font-size: 16px;
-  color: #00353e;
+.historia-texto-numbers {
+  padding-top: 20px;
+  color: red;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  gap: 25px;
 }
 
+#tempo-juntos-anos {
+  font-size: 40px;
+  color: #A67C00;
+  text-align: center;
+  gap: 5px;
+  border: 1px solid rgb(212, 212, 212);
+  width: 100px;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+#tempo-juntos-dias {
+  font-size: 40px;
+  color: #A67C00;
+  text-align: center;
+  gap: 5px;
+  border: 1px solid rgb(212, 212, 212);
+  width: 150px;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+#tempo-juntos-minutos {
+  font-size: 40px;
+  color: #A67C00;
+  text-align: center;
+  gap: 5px;
+  border: 1px solid rgb(212, 212, 212);
+  width: 250px;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+#tempo-juntos-anos:hover,
+#tempo-juntos-dias:hover,
+#tempo-juntos-minutos:hover {
+  background-color: #664301;
+  color: #A87B05;
+}
+
+#tempo-juntos-paragrafo {
+  font-size: 20px;
+  color: #A67C00;
+}
+
+/* Conteúdo do mapa */
 .mapa {
-  height: 900px;
+  height: 760px;
   background-color: #F2F2F2;
   padding: 2% 10%;
   justify-content: center;
@@ -211,7 +327,6 @@ margin-top: 2%;
   border-radius: 15px;
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 80px;
 }
 
@@ -243,7 +358,7 @@ margin-top: 2%;
   height: auto;
 }
 
-iframe {
+#mapa-google {
   width: 1000px;
   height: 350px;
   border-radius: 10px;
@@ -251,8 +366,8 @@ iframe {
   margin-bottom: 30px;
 }
 
-#video {
-  width: 100%;
+#video-barao {
+  width: auto;
   height: auto;
 }
 
@@ -266,7 +381,7 @@ iframe {
 #botao-maps-waze {
   padding: 10px 20px;
   width: 400px;
-  height: 5vh;
+  height: auto;
   margin-top: 30px;
   margin: auto;
   background-color:#05C8F7;
@@ -306,6 +421,7 @@ iframe {
   color: white;
 }
 
+/* Ícones apps mobilidade */
 .direcionamentos a img {
   width: 20px;
   height: 20px;
@@ -313,46 +429,83 @@ iframe {
   border-radius: 50%;
 }
 
-#local {
-  font-family: "Montaga", serif;
-  font-size: 18px;
-  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
-  z-index: 2; /* Garante que o texto fique sobre a imagem */
-  text-align: center; /* Centraliza o texto */
-  color: #00353e; /* Define a cor do texto como branca */
-  font-weight: 300;
-}
-
-.shape {
-  position: relative; /* Mantém o texto no fluxo normal, mas sobreposto à imagem */
-  z-index: 0; /* Garante que o texto fique sobre a imagem */
-  height: 150vh;
-  width: 250vh;
-  background-color: white;
-  margin: 40px auto;
-}
-
-#botão-count {
-  background-color: transparent;
-  border: 0.5px solid #8b8b8b;
-  border-radius: 10px 0px 10px 10px;
-  justify-content: center;
+/* Formulário */
+.formulario {
   display: grid;
-  font-size: 15px;
-  padding: 10px 15px;
-  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+  margin: auto;
+}
+
+.formulario h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+#formulario-container {
+  background-color: white;
+  color:#00353e;
+  width: 40vw;
+  height: 45vh;
+  margin: 40px 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#formulario-infos {
+  color: yellow;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+#formulario-infos > input {
+  border: 1px solid #cecece;
+  outline: none;
+  height: 40px;
+  border-radius: 10px;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+#formulario-infos > input::placeholder {
+  color: #cecece;
+}
+
+#formulario-infos > input:focus {
+  border: 1px solid #00353e;
+}
+
+#formulario-infos > input:focus::placeholder {
   color: #00353e;
-  font-family: "Montaga", serif;
-  text-decoration: none;
-  transition: 0.5s;
 }
 
-#botão-count:hover {
+#formulario-infos-botao {
+  background-color: #055a69;
+  padding: 10px;
+  border-radius: 15px;
+  color: white;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+#formulario-infos-botao:hover {
   background-color: #00353e;
-  color: #ffffff;
-  font-weight: 200;
+  color: white;
 }
-
+/* Controle do Áudio */
 .audio-only-container iframe {
   width: 300px; /* Define a largura do iframe */
   height: 45px; /* Altura suficiente para mostrar os controles */
@@ -481,7 +634,35 @@ p {
   flex-direction: column;
   padding: 20px;
   gap: 20px;
+  width: auto;
   height: auto; /* Altura automática */
+}
+
+#historia-texto {
+  width: 90vw;
+}
+
+.historia-texto-numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+#historia-foto > h2 {
+  width: 100%;
+}
+
+#tempo-juntos-anos,
+#tempo-juntos-dias,
+#tempo-juntos-minutos {
+  width: 300px;
+}
+
+#tempo-juntos-anos:hover,
+#tempo-juntos-dias:hover,
+#tempo-juntos-minutos:hover {
+  background-color: #664301;
+  color: #A87B05;
 }
 
 #historia-foto {
@@ -491,17 +672,16 @@ align-items: center;
 text-align: center;
 }
 
-#historia-foto > h2 {
-  width: auto;
-}
-
 #historia-foto img {
   width: 100%; /* Imagem ocupa largura total */
   height: auto; /* Altura proporcional */
 }
+#video-barao {
+  width: 100%;
+}
 
-#historia-texto {
-  font-size: 14px;
+#mapa-google {
+  width: 90vw;
 }
 
 .mapa {
@@ -530,6 +710,15 @@ text-align: center;
 .direcionamentos {
   display: grid;
   gap: 0.85vh;
+}
+
+.formulario {
+  margin-top: 15px;
+}
+
+#formulario-container {
+  width: 90vw;
+  margin-top: 5px;
 }
 
 /* Controlador de áudio */
