@@ -281,12 +281,12 @@ margin-top: 2%;
   border-radius: 5px;
 }
 
-#tempo-juntos-anos:hover,
+/* #tempo-juntos-anos:hover,
 #tempo-juntos-dias:hover,
 #tempo-juntos-minutos:hover {
   background-color: #664301;
   color: #A87B05;
-}
+} */
 
 #tempo-juntos-paragrafo {
   font-size: 20px;
@@ -442,15 +442,29 @@ margin-top: 2%;
 .formulario h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
+  font-size: 35px;
   margin-top: 15px;
   margin-bottom: 30px;
+}
+
+#formulario-titulo-enfeite {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#enfeites1 {
+  width: 150px;
+  height: auto;
+  margin-top: -10px;
 }
 
 #formulario-container {
   background-color: white;
   color:#00353e;
   width: 40vw;
-  height: 45vh;
+  height: 60vh;
   margin: 40px 0;
   border-radius: 10px;
   display: flex;
@@ -505,6 +519,115 @@ margin-top: 2%;
   background-color: #00353e;
   color: white;
 }
+/* Formulário */
+.presentes {
+  background-color: #000000;
+  width: auto;
+  height: 70vh;
+}
+
+#presentes-titulo {
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  padding: 5vh;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+#presentes-titulo::after{
+  content:'';
+  width: 5%;
+  background-color: white;
+  height: 1px;
+  margin-top: 3px;
+  display: flex;
+  margin-inline: auto;
+}
+
+.presentes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  margin: auto;
+  height: 50vh;
+}
+
+#presentes-pix{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  border-radius: 10px;
+  color: #A45EEB;
+  font-family: "Poppins", sans-serif;
+  gap: 10px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+#presentes-loja1 {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  border-radius: 10px;
+  color: #A60011;
+  font-family: "Poppins", sans-serif;
+  gap: 10px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+
+#imagem-pix {
+  width: 300px;
+  height: 300px;
+}
+
+#imagem-camicado {
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+}
+
+#presentes-loja2 {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  border-radius: 10px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  gap: 10px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+#imagem-loja2 {
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  background-color:#1B1B1B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#imagem-pontofrio {
+  width: 300px;
+  height: 157px;
+}
+
 /* Controle do Áudio */
 .audio-only-container iframe {
   width: 300px; /* Define a largura do iframe */
@@ -720,7 +843,17 @@ text-align: center;
   width: 90vw;
   margin-top: 5px;
 }
-
+/* Botão de rolagem para o topo */
+#botao-scroll {
+width: 50px;
+height: 50px;
+border-radius: 25px;
+margin-bottom: 1px;
+padding: 0;
+font-size: 25px;;
+bottom: 10px;
+left: 10px;
+}
 /* Controlador de áudio */
 .audio-controller {
   bottom: 10px;

@@ -26,7 +26,7 @@
       <nav>
         <ul class="nav-right">
           <li><a href="#inscrição">Inscrição</a></li>
-          <li><a href="#presentes">Presentes</a></li>
+          <li><a href="#presentes-titulo">Presentes</a></li>
           <li><a href="#mural">Mural</a></li>
         </ul>
       </nav>
@@ -86,17 +86,37 @@
   </div>
   <div class="formulario">
     <div id="formulario-container">
-      <h2 id="inscrição">🎯 CONFIRMAÇÃO</h2>
+      <div id="formulario-titulo-enfeite">
+        <img src="imagens/enfeite1.png" alt="" id="enfeites1">
+        <h2 id="inscrição">CONFIRMAÇÃO</h2>
+        <img src="imagens/enfeite1.png" alt="" id="enfeites1">
+      </div>
       <form id="formulario-infos">
-          <input type="text" placeholder="Nome" required>
-          <input type="email" placeholder="e-mail" required>
-          <input list="text" placeholder="Conjugês ou família?" required>
-          <input type="tel" placeholder="número do celular" pattern="\(\d{2}\)\s\d\s\d{4}-\d{4}" inputmode="numeric" maxlength="15"  required>
+          <input type="text" placeholder="Nome" name="nome" required>
+          <input type="email" placeholder="e-mail" name="email" required>
+          <input type="text" placeholder="Levará alguém adicional? Caso sim, digitar número, caso não, digitar 0" name="familiares" required>
+          <input type="tel" placeholder="Celular (XX) X XXXX-XXXX" inputmode="numeric" name="celular" maxlength="15"  required>
           <input type="submit" id="formulario-infos-botao" value="ENVIAR" required>
       </form>
       </div>
     </div>
-  </div>
+    <div class="presentes">
+      <h2 id="presentes-titulo">PRESENTES</h2>
+        <div class="presentes-container">
+          <div id="presentes-pix">
+            <a href="https://nubank.com.br/cobrar/3x04/6700536f-eb1d-4ec6-baa6-5acc075dd5eb" target="_blank"><img src="imagens/pix.jpg" alt="pix" id="imagem-pix"></a>
+            <p>Presente via Pix</p>
+          </div>
+          <div id="presentes-loja1">
+            <a href="https://www.camicado.com.br/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2GKuO2kXNo6lDG79Crlx0UicNlwulABVwcQ&s" alt="" id="imagem-camicado"></a>
+            <p>Presente na Camicado</p>
+          </div>
+          <div id="presentes-loja2">
+            <div id="imagem-loja2"><a href="https://www.pontofrio.com.br/" target="_blank"><img src="https://gkpb.com.br/wp-content/uploads/2021/04/novo-logo-ponto-frio-2021.jpg" alt="" id="imagem-pontofrio"></a></div>
+            <p>Presente na Ponto Frio</p>
+          </div>
+        </div>
+    </div>
     <div class="audio-only-container">
       <div id="audio-placeholder"></div>
     </div>

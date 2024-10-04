@@ -174,3 +174,25 @@ scrollTopBtn.onclick = function() {
     behavior: 'smooth' // Rolagem suave
   });
 };
+
+// Script para formulário de confirmação de presença
+document.getElementById("formulario-infos").addEventListener("submit", function(event){
+  event.preventDefault(); // Evita o envio padrão do formulário
+  const formData = new FormData(this);
+
+  // Converte todos os campos para texto
+  formData.set("familiares", String(formData.get("familiares")));
+  formData.set("celular", String(formData.get("celular")));
+
+  fetch("https://script.google.com/macros/s/AKfycbyMxP2MkGrPDF28mrrWePOR-kp1RaYoofWZ7Vseh0QPTTpOILq3UtGYEtY6npiL09TM/exec", {
+      method: "POST",
+      body: formData
+  })
+  .then(response => response.text())
+  .then(result => {
+      alert("Informações enviadas com sucesso!"); // Exibe o pop-up de confirmação
+      this.reset(); // Limpa os campos do formulário
+  })
+  .catch(error => alert("Erro: " + error));
+});
+
