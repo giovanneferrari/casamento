@@ -180,13 +180,12 @@ h1 {
 .historia {
  padding: 30px;
  border-radius: 5px;
- height: 400px;
+ height: 500px;
  background-color: white;
  padding: 4% 10%;
  display: flex;
  gap: 50px;
  align-items: center;
- box-shadow: 8px 3px 20px 0px inset rgba(0, 0, 0, 0.288);
 }
 
 #historia-foto > h2 {
@@ -434,14 +433,14 @@ margin-top: 2%;
   display: grid;
   justify-content: center;
   align-items: center;
-  height: auto;
+  height: 70vh;
   width: auto;
   margin: auto;
 }
 
 .formulario h2 {
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-weight: 200;
   font-size: 35px;
   margin-top: 15px;
   margin-bottom: 30px;
@@ -463,9 +462,8 @@ margin-top: 2%;
 #formulario-container {
   background-color: white;
   color:#00353e;
-  width: 40vw;
+  width: 45vw; 
   height: 60vh;
-  margin: 40px 0;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -505,11 +503,9 @@ margin-top: 2%;
 }
 
 #formulario-infos-botao {
-  background-color: #055a69;
   padding: 10px;
   border-radius: 15px;
-  color: white;
-  border: none;
+  color: #055a69;
   text-align: center;
   cursor: pointer;
   font-family: "Poppins", sans-serif;
@@ -691,6 +687,19 @@ margin-top: 2%;
   font-size: 18px; /* Tamanho da fonte */
   color: #333; /* Cor do texto */
   margin-bottom: 10px; /* Espaço abaixo do descritivo */
+}
+
+#rodape {
+  display: flex;
+  background-color:#001e24;
+  height: 3vh;
+  text-align: center;
+  color:#F2F2F2;
+  align-items: center;
+  justify-content: center;
+  font-weight: lighter;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
 }
 
 /* Media query para telas menores */
