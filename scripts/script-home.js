@@ -155,6 +155,29 @@ document.getElementById('anos-juntos').textContent = `${anosFormatados}`
 document.getElementById('dias-juntos').textContent = `${diasFormatados}`
 document.getElementById('minutos-juntos').textContent = `${minutosFormatados}`
 
+// Efeito animado na contagem do tempo anos
+function animarContagem(valorFinalAnos) {
+  let inicioContagem = 0;
+  const incremento = valorFinalAnos / 200;
+
+  const updateContagem = () => {
+    if (inicioContagem < valorFinalAnos) {
+      inicioContagem += incremento;
+      document.getElementById('anos-juntos').textContent = `${Math.ceil(inicioContagem)}`;
+
+      setTimeout(updateContagem, 10);
+    } else {
+      document.getElementById('anos-juntos').textContent = valorFinalAnos;
+
+    }
+  };
+  updateContagem();
+}
+
+const valorFinalCalculadoAnos = anosFormatados;
+animarContagem(valorFinalCalculadoAnos);
+
+
 // Pega o botão
 const scrollTopBtn = document.getElementById('botao-scroll');
 

@@ -285,6 +285,17 @@ margin-top: 2%;
   color: #A67C00;
 }
 
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
 /* Conteúdo do mapa */
 .mapa {
   height: 760px;
@@ -380,6 +391,7 @@ margin-top: 2%;
   cursor: pointer;
   border-radius: 25px;
   border: 2px solid #0087a8;
+  color: white;
 }
 
 #botao-maps-google {
@@ -401,7 +413,7 @@ margin-top: 2%;
 
 #botao-maps-waze:hover, #botao-maps-waze:hover * {
   background-color: #0093b8;
-  color: white;
+  color: #0087a8;
 }
 
 #botao-maps-waze:hover {
