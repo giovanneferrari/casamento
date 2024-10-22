@@ -857,6 +857,45 @@ text-align: center;
   width: 90vw;
   margin-top: 5px;
 }
+
+.presentes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: auto;
+  margin: 10px 0;
+}
+
+.presentes-container {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  gap: 10px;
+}
+
+#presentes-pix,
+#presentes-loja1,
+#presentes-loja2 {
+  margin: 0 0 20px 0;
+}
+
+#imagem-pontofrio {
+  width: 200px;
+  height: 100px;
+}
+
+#imagem-pix,
+#imagem-camicado,
+#imagem-loja2 {
+  width: 200px;
+  height: 200px;
+}
+
 /* Botão de rolagem para o topo */
 #botao-scroll {
 width: 50px;
@@ -871,8 +910,9 @@ left: 10px;
 /* Controlador de áudio */
 .audio-controller {
   bottom: 10px;
-  right: 10px;
+  right: 90px;
   padding: 8px;
+  z-index: 999;
 }
 
 .audio-controller button {

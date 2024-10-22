@@ -177,6 +177,40 @@ function animarContagem(valorFinalAnos) {
 const valorFinalCalculadoAnos = anosFormatados;
 animarContagem(valorFinalCalculadoAnos);
 
+function easeOutQuad(t) {
+  return t * (2 - t);  // Função de suavização (easing)
+}
+
+function animarContagemDias(valorFinalDias) {
+  let inicioContagemDias = 0;
+  const duracao = 5000; // Duração da animação em milissegundos
+  let startTime = null;
+
+  function updateContagemDias(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const progress = timestamp - startTime;
+    const timeFraction = Math.min(progress / duracao, 1); // Progresso de 0 a 1
+    const easedFraction = easeOutQuad(timeFraction); // Aplicar a função de suavização
+
+    // Atualizar o valor com base no progresso suavizado
+    inicioContagemDias = Math.ceil(easedFraction * valorFinalDias);
+    document.getElementById('dias-juntos').textContent = inicioContagemDias;
+
+    // Continuar a animação até completar
+    if (progress < duracao) {
+      requestAnimationFrame(updateContagemDias);
+    } else {
+      // Garantir que o valor final seja exibido corretamente
+      document.getElementById('dias-juntos').textContent = valorFinalDias;
+    }
+  }
+
+  requestAnimationFrame(updateContagemDias);
+}
+
+const valorFinalCalculadoDias = diasFormatados;
+animarContagemDias(valorFinalCalculadoDias);
+
 
 // Pega o botão
 const scrollTopBtn = document.getElementById('botao-scroll');
