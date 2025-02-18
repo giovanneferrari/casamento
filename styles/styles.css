@@ -13,6 +13,7 @@ body {
   font-family: Arial, sans-serif;
   height: 100%;
   width: 100%;
+  margin: auto;
 }
 
 .background {
@@ -709,7 +710,6 @@ margin-top: 2%;
 
 /* Media query para telas menores */
 @media (max-width: 768px) {
-
   
   .background {
     height: 70vh;
